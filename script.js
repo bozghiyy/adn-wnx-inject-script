@@ -1,5 +1,5 @@
 ad3p = {
-	version: '0.0.8',
+	version: '0.0.9',
 	start: function () {
 		if (window.location.href.split('/')[3] == 'blog') return console.log('ad3p: quit, blog page;');
 		var target = document.getElementById('articleContent') || document.getElementById('article_detail'), p3, pCount = 0, delay;
@@ -16,7 +16,7 @@ ad3p = {
 				pCount++;
 				if (pCount > 2 && !p3) p3 = target.childNodes[i];
 			}
-		if (pCount > 2) ad3p.drawUnit(p3);
+		if (pCount > 3) ad3p.drawUnit(p3);
 		else {
 			console.log('ad3p: article not contain enough paragraphs;');
 			var src = target.innerHTML, i = 0, oi = 0, pCount = 0, sP = 0, bC = 0;
