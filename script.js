@@ -16,7 +16,7 @@ ad3p = {
 				pCount++;
 				if (pCount > 2 && !p3) p3 = target.childNodes[i];
 			}
-		if (pCount > 3) ad3p.drawUnit(p3);
+		if (pCount > 2) ad3p.drawUnit(p3);
 		else {
 			console.log('ad3p: article not contain enough paragraphs;');
 			var src = target.innerHTML, i = 0, oi = 0, pCount = 0, sP = 0, bC = 0;
@@ -27,7 +27,7 @@ ad3p = {
 				oi = i;
 				bC++;
 			}
-			if (pCount > 3) ad3p.drawUnit(document.getElementsByTagName('BR')[sP]);
+			if (pCount > 2) ad3p.drawUnit(document.getElementsByTagName('BR')[sP]);
 			else console.log('ad3p: article text not contain enough breaks couples;');
 		}
 	},
